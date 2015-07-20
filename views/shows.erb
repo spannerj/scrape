@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Scrape Test</title>
+  <link rel="stylesheet" href="http://current.bootstrapcdn.com/bootstrap-v204/css/bootstrap-combined.min.css">
+</head>
+<body>
+<div class="span8">
+  <!-- This is table layout is pulled directly from twitter bootstrap -->
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Title</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @concerts.each do | concert | %>
+        <tr>
+            <td><%= concert.text %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
